@@ -139,11 +139,57 @@ console.assert(fizzbuzz(10) === "..fizz.buzzfizz..fizzbuzz")
 
 function findLongestWord(sentence){
     // YOUR CODE HERE
-
+    var words = sentence.split(' ')
+    var longest = 0
+    var longestWord 
+  
+    for (var i=0; i < words.length; i++) {
+// 		step 1: log each word one at a time
+        var eachWord = words[i]
+//         log(words[i])
+//         step 2: log the length of each word one at a time
+//         log (eachWord.length)
+//        	 step 3: return the greatest length
+        if (words[i].length > longest) {
+            longest = words[i].length
+            longestWord = words[i]
+        }
+    }	
+    return longestWord
 }
+console.assert(findLongestWord("an encyclopedia full of dogs"))
 
-console.assert(findLongestWord("a book full of dogs") === "book")
-console.assert(findLongestWord("don't mess with Texas") === "Texas")
+// function findLongestWord(sentence){
+//     // YOUR CODE HERE
+//     var inputString = sentence.split(' ')
+//     var newString = ""
+//     for (var i=0; i < inputString.length; i++) {
+//     	var word = inputString[i]
+//     	if (inputString[i].length > word[i]) {
+//     		word[i] = inputString[i]
+
+//     	}
+//     }
+// 	return word[i]
+// }
+
+
+// var getShortWords = function(inputString) {
+//     var arr = inputString.split(' ')
+//     var newString = ""
+//     for (var i=0; i < arr.length; i++) {
+//     	var word = arr[i]
+//         if (word.length <= 3) {
+//         	newString = newString + " " + word
+//     	}
+//     }
+    
+//         return newString
+// }
+
+
+// console.assert(findLongestWord("a book full of dogs") === "book")
+// console.assert(findLongestWord("don't mess with Texas") === "Texas")
 
 /**
  * PART 6
@@ -151,6 +197,7 @@ console.assert(findLongestWord("don't mess with Texas") === "Texas")
  * write a function that returns the Greatest Common Denominator of two numbers
  * - if no GCD exists, return 1
  */
+
 
 console.assert(GCD(5,1) === 1);
 console.assert(GCD(15,3) === 3);
